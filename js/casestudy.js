@@ -2,7 +2,12 @@
   const KEY = 'cs_auth';
   const PASSWORD = 'wearahelmet';
 
-  if (sessionStorage.getItem(KEY) === '1') return;
+  if (sessionStorage.getItem(KEY) === '1') {
+    document.querySelectorAll('iframe[data-src]').forEach(function (f) {
+      f.src = f.dataset.src;
+    });
+    return;
+  }
 
   // Inject modal HTML
   const overlay = document.createElement('div');
@@ -36,6 +41,9 @@
       sessionStorage.setItem(KEY, '1');
       overlay.remove();
       document.body.style.overflow = '';
+      document.querySelectorAll('iframe[data-src]').forEach(function (f) {
+        f.src = f.dataset.src;
+      });
     } else {
       const err = document.getElementById('cs-gate-error');
       err.hidden = false;
