@@ -9,7 +9,13 @@
       "Bash(git -C /Users/rrosenson/Documents/VibeCoding/website log --oneline -5)",
       "Bash(git -C /Users/rrosenson/Documents/VibeCoding/website log --oneline origin/main -5)",
       "Bash(git push *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(git commit -m ' *)",
+      "Bash(brew install *)",
+      "Bash(find /usr/local /opt/homebrew -name \"gh\" 2>/dev/null; which gh 2>/dev/null || echo \"gh not found\")",
+      "Bash(gh auth *)",
+      "Bash(/opt/homebrew/bin/gh --version)",
+      "Bash(/usr/local/bin/gh --version)"
     ]
   }
 }
