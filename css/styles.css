@@ -251,16 +251,18 @@ main { display: block; }
 /* ---- Bike photo wave carousel ---- */
 .bike-carousel {
   overflow: hidden;
-  padding: 48px 0;
-  margin-top: 48px;
+  padding: 20px 0;
+  margin-top: 32px;
+  margin-left: calc(-1 * var(--pad-x));
+  margin-right: calc(-1 * var(--pad-x));
 }
 
 .bike-carousel__track {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 10px;
   width: max-content;
-  animation: marquee 60s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .bike-carousel__track figure {
@@ -269,21 +271,21 @@ main { display: block; }
 }
 
 .bike-carousel__track img {
-  width: 180px;
-  height: 180px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 12px;
   display: block;
 }
 
 .bike-carousel__track figure:nth-child(8n+1) { transform: translateY(0px); }
-.bike-carousel__track figure:nth-child(8n+2) { transform: translateY(-22px); }
-.bike-carousel__track figure:nth-child(8n+3) { transform: translateY(-38px); }
-.bike-carousel__track figure:nth-child(8n+4) { transform: translateY(-22px); }
+.bike-carousel__track figure:nth-child(8n+2) { transform: translateY(-10px); }
+.bike-carousel__track figure:nth-child(8n+3) { transform: translateY(-16px); }
+.bike-carousel__track figure:nth-child(8n+4) { transform: translateY(-10px); }
 .bike-carousel__track figure:nth-child(8n+5) { transform: translateY(0px); }
-.bike-carousel__track figure:nth-child(8n+6) { transform: translateY(22px); }
-.bike-carousel__track figure:nth-child(8n+7) { transform: translateY(38px); }
-.bike-carousel__track figure:nth-child(8n+8) { transform: translateY(22px); }
+.bike-carousel__track figure:nth-child(8n+6) { transform: translateY(10px); }
+.bike-carousel__track figure:nth-child(8n+7) { transform: translateY(16px); }
+.bike-carousel__track figure:nth-child(8n+8) { transform: translateY(10px); }
 
 .logo-carousel__track {
   display: flex;
