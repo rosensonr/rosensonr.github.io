@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design × AI — Rachel Rosenson</title>
+  <meta name="description" content="How my design teams are using AI to think faster, research better, and build with more alignment — and where we won't go." />
+
+  <meta property="og:title" content="Design × AI — Rachel Rosenson" />
+  <meta property="og:description" content="Speed is the new baseline. Here's how we're using AI without losing the thinking." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="../assets/images/profile.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script>
+    if (history.scrollRestoration) history.scrollRestoration = 'manual';
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+  </script>
+</head>
+<body>
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="../index.html#top" aria-label="Rachel Rosenson — home">
+      <img class="nav__avatar" src="../assets/images/profile.jpg" alt="Rachel Rosenson" />
+      <span class="nav__name">Rachel Rosenson</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#content">Content</a>
+      <a href="https://drive.google.com/file/d/1DQpdxAFUiLNbOBtYfV8PcNjRHgSVkIpO/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#content">Content</a>
+    <a href="https://drive.google.com/file/d/1DQpdxAFUiLNbOBtYfV8PcNjRHgSVkIpO/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <main class="cs">
+    <a class="cs-back" href="../index.html#work"><span aria-hidden="true">←</span> Back to work</a>
+
+    <!-- ===== HERO ===== -->
+    <header class="cs-hero">
+      <p class="cs-eyebrow">Perspective</p>
+      <h1 class="cs-title">Design × AI</h1>
+      <div class="cs-meta">
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Context</span>
+          <span class="cs-meta__value">Zalando & across teams</span>
+        </div>
+        <div class="cs-meta__item">
+          <span class="cs-meta__label">Focus</span>
+          <span class="cs-meta__value">Workflow · Research · Culture</span>
+        </div>
+      </div>
+      <p class="cs-summary">
+        When everyone can move fast, speed stops being a competitive advantage — it's just the new baseline. The edge is still what it's always been: <strong>knowing what to build, and why, before you start building it.</strong> AI changes the tools. It doesn't change that.
+      </p>
+    </header>
+
+    <!-- ===== BUILDING WITH AI ===== -->
+    <section class="cs-block">
+      <div class="cs-split">
+        <div>
+          <p class="cs-block__label">01 — Building with AI</p>
+          <h2 class="cs-block__title">Designers in the code, not waiting on it</h2>
+          <p class="cs-block__text">My design teams work in a <strong>Claude × VS Code × Obsidian</strong> workflow we've built and refined together. The combination lets designers work directly in code — building prototypes, shipping to production, without needing an engineer in the room for every decision. Paired with our AI-informed design system, teams can move holistically rather than in isolated handoffs.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(24px,3vw,32px);">
+            <div style="padding:20px;background:var(--surface);border-radius:16px;border:1px solid var(--border);">
+              <p style="font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;">What's working</p>
+              <ul class="cs-moves" style="margin:0;">
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">Designers building and shipping prototypes directly</p></div>
+                </li>
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">AI confidence growing across the team</p></div>
+                </li>
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">Our AI design system gives everyone a shared language</p></div>
+                </li>
+              </ul>
+            </div>
+            <div style="padding:20px;background:var(--surface);border-radius:16px;border:1px solid var(--border);">
+              <p style="font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;">What we're solving</p>
+              <ul class="cs-moves" style="margin:0;">
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">Individual workflows are solved — team workflows aren't</p></div>
+                </li>
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">Merging parallel work without breaking each other's code</p></div>
+                </li>
+                <li class="cs-move">
+                  <span class="cs-move__num">·</span>
+                  <div class="cs-move__body"><p class="cs-move__text">Already shipping in internal tools and B2B products</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cs-split__media">
+          <figure style="margin:0;">
+            <div style="width:100%;aspect-ratio:4/3;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;">
+              <p style="color:var(--muted);font-size:14px;margin:0;">Image coming</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH ===== -->
+    <section class="cs-block">
+      <div class="cs-split cs-split--reverse">
+        <div>
+          <p class="cs-block__label">02 — Research</p>
+          <h2 class="cs-block__title">AI made us more research-led, not less</h2>
+          <p class="cs-block__text">The assumption is that AI replaces research. The opposite happened. By removing operational overhead, AI freed the team to focus on the parts that actually require human judgement. I led the Operations team to rebuild our research process from the ground up.</p>
+          <ul class="cs-moves" style="margin-top:clamp(20px,3vw,28px);">
+            <li class="cs-move">
+              <span class="cs-move__num">·</span>
+              <div class="cs-move__body"><p class="cs-move__text">Custom AI tooling guides any team member through methodology selection, setup, screener writing, and recruitment</p></div>
+            </li>
+            <li class="cs-move">
+              <span class="cs-move__num">·</span>
+              <div class="cs-move__body"><p class="cs-move__text">A Claude Code workflow handles cleaning, analysis, and synthesis</p></div>
+            </li>
+            <li class="cs-move">
+              <span class="cs-move__num">·</span>
+              <div class="cs-move__body"><p class="cs-move__text">Outputs live in our internal research LLM — findable and shareable, not buried in a doc no one reads</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="cs-split__media">
+          <figure style="margin:0;">
+            <div style="width:100%;aspect-ratio:4/3;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;">
+              <p style="color:var(--muted);font-size:14px;margin:0;">Image coming</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SYNTHETIC USERS CALLOUT ===== -->
+    <section class="cs-block">
+      <div style="padding:clamp(28px,4vw,48px);background:var(--surface);border-radius:20px;border:1px solid var(--border);">
+        <p style="font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;">Where we won't go</p>
+        <h3 style="font-size:clamp(20px,2.4vw,28px);font-weight:700;margin:0 0 16px;">Synthetic users</h3>
+        <p class="cs-block__text" style="max-width:680px;">Not because AI-generated personas can't be accurate — that's genuinely debatable. But because you lose the discomfort. Real research forces you to face things you didn't expect. Synthetic data lets you confirm what you already believe, and blame the model when your assumptions get challenged.</p>
+        <p class="cs-block__text" style="max-width:680px;margin-top:16px;">That's not research. That's expensive confirmation bias.</p>
+      </div>
+    </section>
+
+    <!-- ===== CULTURE ===== -->
+    <section class="cs-block">
+      <div class="cs-split">
+        <div>
+          <p class="cs-block__label">03 — Evolving the culture</p>
+          <h2 class="cs-block__title">Moving the whole org forward — together</h2>
+          <p class="cs-block__text">At Zalando, we have the AI-obsessed, the AI-terrified, and everything in between. That gap was widening faster than organic learning could close it — and hoping people would figure it out individually wasn't a strategy.</p>
+          <p class="cs-block__text">So I organised <strong>Zalando's AI Design Day</strong>: an internal conference with external speakers, teams sharing real wins and learnings, and hands-on workshops running in parallel — from Claude 101 to building Figma plugins to getting comfortable with our AI design system.</p>
+          <p class="cs-block__text">The goal wasn't to convert the sceptics or slow down the enthusiasts. It was to move the whole org forward together. You can't afford to leave people behind — and you can't afford half your team building in a way the other half doesn't understand.</p>
+        </div>
+        <div class="cs-split__media">
+          <figure style="margin:0;">
+            <div style="width:100%;aspect-ratio:4/3;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;">
+              <p style="color:var(--muted);font-size:14px;margin:0;">Image coming</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT SET-UP ===== -->
+    <section class="cs-block">
+      <div class="cs-split cs-split--reverse">
+        <div>
+          <p class="cs-block__label">04 — Project set-up</p>
+          <h2 class="cs-block__title">When you move fast, alignment matters more</h2>
+          <p class="cs-block__text">A misaligned team that moves slowly wastes weeks. A misaligned team that moves fast ships the wrong thing in days.</p>
+          <p class="cs-block__text">To stay aligned at speed, I've built <strong>custom AI assistants</strong> briefed on company context, ways of working, and the problem space. Drop in a problem statement and you have a sparring partner that already knows the territory — not to generate documentation, but to create shared clarity on what we're building, and what we're not.</p>
+          <p class="cs-block__text">From there, the same setup feeds into market research, conversion principles, and pattern detection. Teams get into solution space faster, with fewer false starts.</p>
+        </div>
+        <div class="cs-split__media">
+          <figure style="margin:0;">
+            <div style="width:100%;aspect-ratio:4/3;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;">
+              <p style="color:var(--muted);font-size:14px;margin:0;">Image coming</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEARNING ===== -->
+    <figure class="cs-quote">
+      <p class="cs-quote__label">The through-line</p>
+      <blockquote>AI removes constraints. It doesn't remove the need to think. The teams that win won't be the ones who move fastest — they'll be the ones who stay clearest about what they're building and why.</blockquote>
+    </figure>
+
+    <!-- ===== CTA ===== -->
+    <section class="cs-cta">
+      <h2 class="cs-cta__title">Sound interesting?<br />Let's talk all things design.</h2>
+      <div class="hero__actions">
+        <a class="btn btn--outline" href="../index.html#work"><span aria-hidden="true">←</span> Back to work</a>
+        <a class="btn btn--primary" href="mailto:rosensonr@gmail.com">Let's Talk <span class="btn__arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <nav class="footer__links" aria-label="Footer">
+      <a href="../index.html#top">Rachel Rosenson</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#content">Content</a>
+      <a href="https://drive.google.com/file/d/1DQpdxAFUiLNbOBtYfV8PcNjRHgSVkIpO/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <p class="footer__copy">© <span id="year"></span> Rachel Rosenson</p>
+  </footer>
+
+  <script src="../js/casestudy.js"></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
