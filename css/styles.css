@@ -285,6 +285,46 @@ main { display: block; }
 .bike-carousel__track figure:nth-child(8n+7) { transform: translateY(20px); }
 .bike-carousel__track figure:nth-child(8n+8) { transform: translateY(12px); }
 
+/* ---- Thought leadership cover carousel ---- */
+.tl-carousel {
+  overflow: hidden;
+  padding: 4px 0;
+}
+.tl-carousel__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: marquee 65s linear infinite;
+}
+.tl-carousel__track figure {
+  margin: 0;
+  flex: none;
+  width: 220px;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.tl-carousel__track figure::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%);
+}
+.tl-carousel__track figcaption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  z-index: 1;
+}
+
 .logo-carousel__track {
   display: flex;
   align-items: center;
