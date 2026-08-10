@@ -16,6 +16,59 @@
 
   <link rel="icon" href="../assets/images/profile.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* Vision GIFs are 360px wide with the phone mockup spanning x32–x327,
+       leaving ~32px of blank canvas each side. Scale to 360/295 and shift
+       left by 32/295 so the border locks to the artwork edges. */
+    .vision-crop {
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      line-height: 0;
+    }
+    .vision-crop img {
+      display: block;
+      width: 122.034%;
+      margin-left: -10.847%;
+    }
+
+    /* The three research themes, set as large display type. */
+    .themes {
+      margin-top: clamp(28px, 4vw, 40px);
+      max-width: 640px;
+    }
+    .theme {
+      padding: clamp(18px, 2.2vw, 24px) 0;
+      border-top: 1px solid var(--border);
+    }
+    .theme:last-child { border-bottom: 1px solid var(--border); }
+    .theme__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .theme__title {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      margin: 0;
+      text-wrap: balance;
+    }
+    .theme__mark {
+      background: var(--accent);
+      padding: 0 5px;
+      border-radius: 4px;
+    }
+    .theme__desc {
+      font-size: 15px;
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+  </style>
   <script>
     if (history.scrollRestoration) history.scrollRestoration = 'manual';
     window.addEventListener('load', () => window.scrollTo(0, 0));
@@ -80,7 +133,7 @@
         Two months into my tenure, I was appointed to spearhead Zalando's <strong>5-Year Customer Experience Strategy</strong> — redefining the company's market position for 2028 and acting as the primary bridge between executive business goals and design strategy.
       </p>
       <p class="cs-block__text">
-        Two months in. Strict NDA. No access to the team working the problem. I had to build a 5-year vision for a product ecosystem I was still learning — without being able to crowdsource from the 150 designers who knew it best. That constraint forced a different approach: external research, strategic foresight frameworks, and a decision-making process rigorous enough to hold up to SVP scrutiny without any of the usual bottom-up input.
+        I was asked to build a 5-year vision for a product ecosystem I was still learning, while a strict internal NDA prevented deep collaboration. That constraint forced a different approach: external research, strategic foresight frameworks, and a decision-making process rigorous enough to hold up to SVP scrutiny without any of the usual bottom-up input.
       </p>
     </section>
 
@@ -98,21 +151,21 @@
           </figure>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:clamp(24px,3vw,32px);">
-        <div style="padding:22px 16px;background:#0c0c0c;border-radius:16px;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e2f505;margin:0 0 14px;">Theme 1</p>
-          <p style="font-weight:700;font-size:16px;color:#fff;margin:0 0 10px;line-height:1.25;">High-fidelity inspiration</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.42);margin:0;line-height:1.55;">Richer, more personalised discovery.</p>
+      <div class="themes">
+        <div class="theme">
+          <p class="theme__label">Theme 1</p>
+          <p class="theme__title"><span class="theme__mark">High-fidelity</span> inspiration</p>
+          <p class="theme__desc">Richer, more personalised discovery.</p>
         </div>
-        <div style="padding:22px 16px;background:#0c0c0c;border-radius:16px;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e2f505;margin:0 0 14px;">Theme 2</p>
-          <p style="font-weight:700;font-size:16px;color:#fff;margin:0 0 10px;line-height:1.25;">GenAI integration</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.42);margin:0;line-height:1.55;">AI experiences that feel personal at scale.</p>
+        <div class="theme">
+          <p class="theme__label">Theme 2</p>
+          <p class="theme__title"><span class="theme__mark">GenAI</span> integration</p>
+          <p class="theme__desc">AI experiences that feel personal at scale.</p>
         </div>
-        <div style="padding:22px 16px;background:#0c0c0c;border-radius:16px;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e2f505;margin:0 0 14px;">Theme 3</p>
-          <p style="font-weight:700;font-size:16px;color:#fff;margin:0 0 10px;line-height:1.25;">Social commerce</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.42);margin:0;line-height:1.55;">Profiles, followership, and community.</p>
+        <div class="theme">
+          <p class="theme__label">Theme 3</p>
+          <p class="theme__title"><span class="theme__mark">Social</span> commerce</p>
+          <p class="theme__desc">Profiles, followership, and community.</p>
         </div>
       </div>
     </section>
@@ -124,15 +177,21 @@
       <p class="cs-block__text">Collaborated with two design agencies as strategic agitators — brought in specifically to push past what internal teams would self-censor. I defined the creative guardrails and managed the budget to co-create three sacrificial concepts: deliberately provocative, intentionally not production-ready. It worked — the Board moved from "interesting in principle" to committing a dedicated implementation workstream.</p>
       <div class="cs-gallery" style="margin-top:clamp(28px,4vw,40px);">
         <figure style="margin:0;">
-          <img src="../assets/casestudyimages/Vision1.gif" alt="Mood Boards" style="width:100%;border-radius:20px;display:block;border:1.5px solid var(--border);" />
+          <div class="vision-crop">
+            <img src="../assets/casestudyimages/Vision1.gif" alt="Mood Boards" />
+          </div>
           <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">Mood Boards — User generated fashion mood boards to publicly share with your friends or style tribe</figcaption>
         </figure>
         <figure style="margin:0;">
-          <img src="../assets/casestudyimages/Vision2.gif" alt="Virtual Avatar" style="width:100%;border-radius:20px;display:block;border:1.5px solid var(--border);" />
+          <div class="vision-crop">
+            <img src="../assets/casestudyimages/Vision2.gif" alt="Virtual Avatar" />
+          </div>
           <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">Virtual Avatar — How to create your avatar to empower virtual try on experiences</figcaption>
         </figure>
         <figure style="margin:0;">
-          <img src="../assets/casestudyimages/Vision3.gif" alt="Personalised Feed" style="width:100%;border-radius:20px;display:block;border:1.5px solid var(--border);" />
+          <div class="vision-crop">
+            <img src="../assets/casestudyimages/Vision3.gif" alt="Personalised Feed" />
+          </div>
           <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">Personalised Feed — Revamping Zalando's landing page to make it a starting point for fashion inspiration</figcaption>
         </figure>
       </div>
@@ -145,7 +204,8 @@
       <p class="cs-block__text">Acted as Creative Director with a motion agency to produce three vision films — crafting a narrative arc that was provocative yet grounded in feasible tech. These became the cornerstone of the 2024 Markets Day press release.</p>
       <div style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;margin-top:clamp(28px,4vw,40px);border-radius:20px;">
         <iframe
-          data-src="https://player.vimeo.com/video/1203045553?autoplay=1&loop=1"
+          id="vision-films"
+          data-lazy-src="https://player.vimeo.com/video/1203045553?autoplay=1&loop=1"
           style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
@@ -336,5 +396,30 @@
 
   <script src="../js/casestudy.js"></script>
   <script src="../js/main.js" defer></script>
+  <script>
+    // Load the vision-films embed only once it scrolls into view, so it
+    // doesn't autoplay off-screen the moment the page unlocks.
+    (function () {
+      const frame = document.getElementById('vision-films');
+      if (!frame) return;
+
+      function check() {
+        if (frame.src) return;
+        const r = frame.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        // Fire once roughly 40% of the player has entered the viewport.
+        const visible = Math.min(r.bottom, vh) - Math.max(r.top, 0);
+        if (r.height > 0 && visible / r.height >= 0.4) {
+          frame.src = frame.dataset.lazySrc;
+          window.removeEventListener('scroll', check);
+          window.removeEventListener('resize', check);
+        }
+      }
+
+      window.addEventListener('scroll', check, { passive: true });
+      window.addEventListener('resize', check, { passive: true });
+      check();
+    })();
+  </script>
 </body>
 </html>
