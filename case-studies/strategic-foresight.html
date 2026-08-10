@@ -32,28 +32,28 @@
       margin-left: -10.847%;
     }
 
-    /* The three research themes, set as large display type. */
+    /* The three research themes, set as display type, stacked in the
+       left column alongside the approach copy above them. */
     .themes {
-      margin-top: clamp(28px, 4vw, 40px);
-      max-width: 640px;
+      margin-top: 24px;
     }
     .theme {
-      padding: clamp(18px, 2.2vw, 24px) 0;
+      padding: 14px 0;
       border-top: 1px solid var(--border);
     }
     .theme:last-child { border-bottom: 1px solid var(--border); }
     .theme__label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 0 0 10px;
+      margin: 0 0 6px;
     }
     .theme__title {
-      font-size: clamp(24px, 3.2vw, 32px);
+      font-size: clamp(19px, 2.1vw, 22px);
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.15;
       letter-spacing: -.01em;
       margin: 0;
       text-wrap: balance;
@@ -64,9 +64,9 @@
       border-radius: 4px;
     }
     .theme__desc {
-      font-size: 15px;
+      font-size: 14px;
       color: var(--muted);
-      margin: 8px 0 0;
+      margin: 6px 0 0;
     }
   </style>
   <script>
@@ -144,28 +144,28 @@
         <div>
           <h2 class="cs-block__title">From ambiguity to aligned, operationalized strategy</h2>
           <p class="cs-block__text">Used strategic foresight and market research to build a decision-making framework, forcing SVPs to align on Business Probability vs. Strategic Advantage. Six months of ambiguity collapsed into three agreed pillars.</p>
+          <div class="themes">
+            <div class="theme">
+              <p class="theme__label">Theme 1</p>
+              <p class="theme__title"><span class="theme__mark">High-fidelity</span> inspiration</p>
+              <p class="theme__desc">Richer, more personalised discovery.</p>
+            </div>
+            <div class="theme">
+              <p class="theme__label">Theme 2</p>
+              <p class="theme__title"><span class="theme__mark">GenAI</span> integration</p>
+              <p class="theme__desc">AI experiences that feel personal at scale.</p>
+            </div>
+            <div class="theme">
+              <p class="theme__label">Theme 3</p>
+              <p class="theme__title"><span class="theme__mark">Social</span> commerce</p>
+              <p class="theme__desc">Profiles, followership, and community.</p>
+            </div>
+          </div>
         </div>
         <div class="cs-split__media">
           <figure style="margin:0;">
             <img src="../assets/casestudyimages/stratategic-foresight-cover@2x.png" alt="Strategic foresight decision framework" style="width:100%;display:block;border-radius:20px;border:1.5px solid var(--border);" />
           </figure>
-        </div>
-      </div>
-      <div class="themes">
-        <div class="theme">
-          <p class="theme__label">Theme 1</p>
-          <p class="theme__title"><span class="theme__mark">High-fidelity</span> inspiration</p>
-          <p class="theme__desc">Richer, more personalised discovery.</p>
-        </div>
-        <div class="theme">
-          <p class="theme__label">Theme 2</p>
-          <p class="theme__title"><span class="theme__mark">GenAI</span> integration</p>
-          <p class="theme__desc">AI experiences that feel personal at scale.</p>
-        </div>
-        <div class="theme">
-          <p class="theme__label">Theme 3</p>
-          <p class="theme__title"><span class="theme__mark">Social</span> commerce</p>
-          <p class="theme__desc">Profiles, followership, and community.</p>
         </div>
       </div>
     </section>
@@ -218,15 +218,15 @@
     <section class="cs-block">
       <p class="cs-block__label">Operationalising the Vision</p>
       <h2 class="cs-block__title">From secret strategy to scaled execution</h2>
-      <p class="cs-block__text">Once the NDA lifted, I led change management — forking the secret strategy into a 20-designer workstream alongside three other Heads of Design, and mentoring teams to preserve the original strategic intent during execution.</p>
+      <p class="cs-block__text">Once the NDA lifted, I led change management by forking the NDA strategy into a 20-designer workstream alongside VP product, product directors and design managers. I supported teams by bringing context to preserve the original strategic but also encouraging their ownership of the details to launch.</p>
       <div class="cs-gallery" style="margin-top: clamp(28px, 4vw, 40px);">
         <figure style="margin:0;text-align:center;">
-          <img src="../assets/casestudyimages/before.png" alt="Before" style="width:100%;border-radius:20px;display:block;" />
-          <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">Before</figcaption>
+          <img src="../assets/casestudyimages/before.png" alt="User Journey Before" style="width:100%;border-radius:20px;display:block;" />
+          <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">User Journey Before</figcaption>
         </figure>
         <figure style="margin:0;text-align:center;">
-          <img src="../assets/casestudyimages/After.png" alt="After" style="width:100%;border-radius:20px;display:block;" />
-          <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">After</figcaption>
+          <img src="../assets/casestudyimages/After.png" alt="User Journey After" style="width:100%;border-radius:20px;display:block;" />
+          <figcaption style="margin-top:12px;font-size:14px;color:var(--muted);">User Journey After</figcaption>
         </figure>
       </div>
     </section>
