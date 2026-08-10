@@ -621,6 +621,41 @@ main { display: block; }
   color: var(--muted);
 }
 
+/* ---------- Icon chip grid ---------- */
+.icon-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.icon-chip {
+  padding: clamp(16px, 2vw, 20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.icon-chip__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 14px;
+}
+.icon-chip__text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .icon-chip-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Stats ---------- */
 .cs-stats {
   display: grid;
