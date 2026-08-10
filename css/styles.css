@@ -296,7 +296,7 @@ main { display: block; }
   width: max-content;
   animation: marquee 65s linear infinite;
 }
-.tl-carousel__track figure {
+.tl-carousel__track a {
   margin: 0;
   flex: none;
   width: 220px;
@@ -306,14 +306,20 @@ main { display: block; }
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  display: block;
+  text-decoration: none;
+  transition: transform .2s;
 }
-.tl-carousel__track figure::before {
+.tl-carousel__track a:hover {
+  transform: translateY(-4px);
+}
+.tl-carousel__track a::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%);
 }
-.tl-carousel__track figcaption {
+.tl-carousel__track a span {
   position: absolute;
   left: 14px;
   right: 14px;
