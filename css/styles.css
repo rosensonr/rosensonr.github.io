@@ -667,6 +667,56 @@ main { display: block; }
   color: var(--muted);
 }
 
+/* ---------- Working / solving comparison list ---------- */
+.wsw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.wsw-col__label {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.wsw-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.wsw-item__mark {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.wsw-item__mark--yes {
+  background: var(--accent);
+  color: #000;
+}
+.wsw-item__mark--no {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.wsw-item__text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .wsw-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Icon chip grid ---------- */
 .icon-chip-grid {
   display: grid;
